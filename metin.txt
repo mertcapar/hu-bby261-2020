@@ -1,0 +1,1 @@
+﻿Bilgisayar donanımı, bir bilgisayarı oluşturan fiziksel parçaların genel adıdır.
