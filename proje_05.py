@@ -135,7 +135,8 @@ class MesajListesi:
     def db_ara(self):
         satirAra = self.satir9.get()
         self.satir3.delete(0, END)
-        self.komut.execute("SELECT * FROM kisiler WHERE satirNo=?", (satirAra,))
+        #Satır numarası ile arama yapma #self.komut.execute("SELECT * FROM kisiler WHERE kisi_adsoyad=? OR kisi_mesaj=?", (satirAra,satirAra))
+        self.komut.execute("SELECT * FROM kisiler WHERE kisi_adsoyad LIKE ? OR kisi_mesaj LIKE ?", ('%'+satirAra+'%','%'+satirAra+'%'))
         for kayitlar in self.komut.fetchall():
             self.satir3.insert(END, kayitlar)
             self.satir9.delete(0, END)
