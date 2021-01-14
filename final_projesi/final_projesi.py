@@ -34,7 +34,7 @@ plt.title("Lineer Regresyon")
 plt.show()
 
 # lineer tahmin
-print("Lineer Regresyon Tahmin:", linreg.predict([[280]]))
+print("Lineer Regresyon Tahmin:", linreg.predict([[230]]))
 
 # polinomsal regresyon
 polreg = PolynomialFeatures(degree=7)
@@ -51,5 +51,5 @@ plt.title("Polinomsal Regresyon (Derece:7)")
 plt.show()
 
 # polinomsal tahmin
-print("Polinomsal Regresyon Tahmin:", linreg.predict(polreg.fit_transform([[280]])))
+print("Polinomsal Regresyon Tahmin:", linreg.predict(polreg.fit_transform([[230]])))
 
